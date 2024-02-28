@@ -17,10 +17,10 @@ struct Person {
     
     static func getPerson() -> [Person]{
         [Person(
-            name: contactList.names.randomElement() ?? "",
-            surname: contactList.surnames.randomElement() ?? "",
-            phoneNumber: contactList.phoneNumbers.randomElement() ?? "",
-            email: contactList.emails.randomElement() ?? ""
+            name: dataStore.names.randomElement() ?? "",
+            surname: dataStore.surnames.randomElement() ?? "",
+            phoneNumber: dataStore.phoneNumbers.randomElement() ?? "",
+            email: dataStore.emails.randomElement() ?? ""
         )
         ]
     }

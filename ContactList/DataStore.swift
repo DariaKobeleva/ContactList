@@ -19,7 +19,7 @@ final class DataStore {
     }
 }
 
-let contactList = DataStore(
+let dataStore = DataStore(
     names: ["Jean",
             "Claire",
             "Luc",
