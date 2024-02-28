@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ContactViewController.swift
 //  ContactList
 //
 //  Created by Дарья Кобелева on 28.02.2024.
@@ -8,24 +8,16 @@
 import UIKit
 
 final class ContactViewController: UITableViewController {
-    private var contactList: [Person] = []
+    private var contactList = Person.getContactList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getContactList()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let personDetailVC = segue.destination as? PersonDetailsViewController
         personDetailVC?.person = contactList[indexPath.row]
-    }
-    
-    private func getContactList() {
-        for _ in 0..<dataStore.names.count {
-            let person = Person.getPerson()
-            contactList.append(contentsOf: person)
-        }
     }
 }
 
