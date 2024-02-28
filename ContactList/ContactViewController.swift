@@ -12,10 +12,16 @@ final class ContactViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPerson()
+        getContactList()
     }
-
-    private func getPerson(){
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let personDetailVC = segue.destination as? PersonDetailsViewController
+        personDetailVC?.person = contactList[indexPath.row]
+    }
+    
+    private func getContactList() {
         for _ in 0..<dataStore.names.count {
             let person = Person.getPerson()
             contactList.append(contentsOf: person)
@@ -39,3 +45,5 @@ extension ContactViewController {
         return cell
     }
 }
+
+

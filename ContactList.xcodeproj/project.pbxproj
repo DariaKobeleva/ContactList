@@ -15,6 +15,7 @@
 		207969462B8F4D15002FC6C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207969442B8F4D15002FC6C5 /* LaunchScreen.storyboard */; };
 		2079694E2B8F5088002FC6C5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2079694D2B8F5088002FC6C5 /* DataStore.swift */; };
 		207969502B8F545F002FC6C5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2079694F2B8F545F002FC6C5 /* Person.swift */; };
+		207969522B8F63D2002FC6C5 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207969512B8F63D2002FC6C5 /* PersonDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		207969472B8F4D15002FC6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2079694D2B8F5088002FC6C5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		2079694F2B8F545F002FC6C5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		207969512B8F63D2002FC6C5 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,9 @@
 				207969392B8F4D14002FC6C5 /* AppDelegate.swift */,
 				2079693B2B8F4D14002FC6C5 /* SceneDelegate.swift */,
 				2079693D2B8F4D14002FC6C5 /* ContactViewController.swift */,
-				2079694D2B8F5088002FC6C5 /* DataStore.swift */,
+				207969512B8F63D2002FC6C5 /* PersonDetailsViewController.swift */,
 				2079694F2B8F545F002FC6C5 /* Person.swift */,
+				2079694D2B8F5088002FC6C5 /* DataStore.swift */,
 				2079693F2B8F4D14002FC6C5 /* Main.storyboard */,
 				207969422B8F4D15002FC6C5 /* Assets.xcassets */,
 				207969442B8F4D15002FC6C5 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				207969502B8F545F002FC6C5 /* Person.swift in Sources */,
 				2079693E2B8F4D14002FC6C5 /* ContactViewController.swift in Sources */,
+				207969522B8F63D2002FC6C5 /* PersonDetailsViewController.swift in Sources */,
 				2079694E2B8F5088002FC6C5 /* DataStore.swift in Sources */,
 				2079693A2B8F4D14002FC6C5 /* AppDelegate.swift in Sources */,
 				2079693C2B8F4D14002FC6C5 /* SceneDelegate.swift in Sources */,

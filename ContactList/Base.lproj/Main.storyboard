@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,6 +33,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PaQ-el-DSN" kind="show" id="k5d-3A-eRr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,11 +43,57 @@
                             <outlet property="delegate" destination="7UA-Ag-pJ9" id="NZa-va-lMu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Persons List" id="xtl-bs-Syd"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="xtl-bs-Syd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="NqI-Er-IHC"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ftz-nC-JIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="179" y="-21"/>
+        </scene>
+        <!--Name-->
+        <scene sceneID="yYe-wm-F1T">
+            <objects>
+                <viewController id="PaQ-el-DSN" customClass="PersonDetailsViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZi-zU-X6K">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="R7g-MF-dCN">
+                                <rect key="frame" x="16" y="171" width="361" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLA-0z-ZKD">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWW-OV-lto">
+                                        <rect key="frame" x="0.0" y="39" width="361" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QZG-Bg-6ie"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R7g-MF-dCN" firstAttribute="top" secondItem="QZG-Bg-6ie" secondAttribute="top" constant="16" id="Bek-sj-kA5"/>
+                            <constraint firstItem="QZG-Bg-6ie" firstAttribute="trailing" secondItem="R7g-MF-dCN" secondAttribute="trailing" constant="16" id="HpM-Iu-tfa"/>
+                            <constraint firstItem="R7g-MF-dCN" firstAttribute="leading" secondItem="QZG-Bg-6ie" secondAttribute="leading" constant="16" id="IOj-SF-Bqc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Name" id="aPS-g8-3Wj"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="dWW-OV-lto" id="NFx-MD-Nsc"/>
+                        <outlet property="phoneNumberLabel" destination="TLA-0z-ZKD" id="MOz-bF-GyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ylK-9Y-SCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="taa-1L-yFj">
