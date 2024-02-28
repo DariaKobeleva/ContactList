@@ -13,8 +13,10 @@ final class PersonDetailsViewController: UIViewController {
     @IBOutlet var phoneNumberLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
+    // MARK: - Public Properties
     var person: Person!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = person.fullName

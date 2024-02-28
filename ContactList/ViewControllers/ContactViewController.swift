@@ -8,12 +8,11 @@
 import UIKit
 
 final class ContactViewController: UITableViewController {
+    
+    // MARK: - Properties
     private var contactList = Person.getContactList()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let personDetailVC = segue.destination as? PersonDetailsViewController
