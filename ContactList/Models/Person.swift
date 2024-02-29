@@ -25,10 +25,10 @@ struct Person {
         
         for index in 0..<DataStore.shared.names.count {
             let contact = Person(
-                name: DataStore.shared.names[index],
-                surname: DataStore.shared.surnames[index],
-                phoneNumber: DataStore.shared.phoneNumbers[index],
-                email: DataStore.shared.emails[index]
+                name: names[index],
+                surname: surnames[index],
+                phoneNumber: phoneNumbers[index],
+                email: emails[index]
             )
             contactsList.append(contact)
         }
