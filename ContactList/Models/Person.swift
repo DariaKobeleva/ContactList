@@ -15,38 +15,24 @@ struct Person {
         "\(name) \(surname)"
     }
     
-    static func getPerson() -> [Person]{
-        [Person(
-            name: DataStore.shared.names.randomElement() ?? "",
-            surname: DataStore.shared.surnames.randomElement() ?? "",
-            phoneNumber: DataStore.shared.phoneNumbers.randomElement() ?? "",
-            email: DataStore.shared.emails.randomElement() ?? ""
-        )
-        ]
-    }
-}
-
-extension Person {
     static func getContactList() -> [Person] {
         var contactsList: [Person] = []
         
-        var names = DataStore.shared.names
-        var surnames = DataStore.shared.surnames
-        var emails = DataStore.shared.emails
-        var phoneNumbers = DataStore.shared.phoneNumbers
+        var names = DataStore.shared.names.shuffled()
+        var surnames = DataStore.shared.surnames.shuffled()
+        var emails = DataStore.shared.emails.shuffled()
+        var phoneNumbers = DataStore.shared.phoneNumbers.shuffled()
         
-        while !names.isEmpty {
-            let index = Int.random(in: 0..<names.count)
-            
+        for index in 0..<DataStore.shared.names.count {
             let contact = Person(
-                name: names.remove(at: index),
-                surname: surnames.remove(at: index),
-                phoneNumber: phoneNumbers.remove(at: index),
-                email: emails.remove(at: index))
-            
+                name: DataStore.shared.names[index],
+                surname: DataStore.shared.surnames[index],
+                phoneNumber: DataStore.shared.phoneNumbers[index],
+                email: DataStore.shared.emails[index]
+            )
             contactsList.append(contact)
         }
-        
         return contactsList
     }
 }
+
